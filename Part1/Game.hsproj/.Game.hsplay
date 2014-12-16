@@ -1,0 +1,22 @@
+-- Haskell Playground 1.0
+import Graphics.SpriteKit
+
+let sprite = spriteWithImageNamed "Chicken.bmp"
+    apple  = spriteWithImageNamed "Apple.bmp"
+
+let brownColor = colorWithRGBA 0.8 0.8 0.2 1
+
+let move = (moveBy (Vector (-100) 0)){actionDuration = 4}
+
+let chickenSprite = sprite{ nodePosition = Point 200 0
+                          , nodeXScale = 0.5
+                          , nodeYScale = 0.5
+                          , spriteColor = brownColor
+                          , spriteColorBlendFactor = 0.5
+                          , nodeActionDirectives = [runAction move] 
+                          }
+    appleSprite   = apple { nodePosition = Point 0 0
+                          , nodeXScale = 0.5
+                          , nodeYScale = 0.5 }
+node [appleSprite, chickenSprite]
+
