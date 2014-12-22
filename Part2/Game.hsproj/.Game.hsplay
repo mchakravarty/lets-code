@@ -1,0 +1,9 @@
+-- Haskell Playground 1.0
+node [appleSprite, chickenSprite]
+
+myScene
+
+Nothing :: Maybe Int
+Just 5  :: Maybe Int
+
+Just (Point 100 150) :: Maybe Point
